@@ -2,72 +2,68 @@
     "collections": {
         "diablico-sucio": {
             "A": {
-                "others": false,
-                "original": {
-                    "file": "A_big.png"
-                }
+                "name": "",
+                "shirts": ["A_big.png"],
+                "hexes": ["#000"]
             },
             "B": {
-                "others": false,
-                "original": {
-                    "file": "B_big.png"
-                }
+              "name": "",
+              "shirts": ["B_big.png", "BV_big.png"],
+              "hexes": ["#FFF", "#FFF"]
             },
             "C": {
-                "others": false,
-                "original": {
-                    "file": "C_big.png"
-                }
+              "name": "poster",
+              "shirts": ["C_big.png"],
+              "hexes": ["#FFF"]
             },
             "D": {
-                "others": false,
-                "original": {
-                    "file": "D_big.png"
-                }
+              "name": "mini",
+              "shirts": ["D_big.png", "DV_big.png"],
+              "hexes": ["#FFF", "#FFF"]
+            }
+            ,
+            "E": {
+              "name": "grumpy",
+              "shirts": ["E_big.png", "EV_big.png"],
+              "hexes": ["#FFF", "#FFF"]
+            }
+            ,
+            "F": {
+              "name": "smiley",
+              "shirts": ["F_big.png", "FV_big.png"],
+              "hexes": ["#FFF", "#FFF"]
             }
         },
         "la-mirada-marsa": {
             "A": {
-                "others": true,
-                "original": {
-                    "file": "A_big.png"
-                },
-                "diffs": ["A_big.png", "AA_big.png"],
+                "name": "",
+                "shirts": ["A_big.png", "AA_big.png"],
                 "hexes": ["#FFFFFF", "#FFE4B8"]
             },
             "B": {
-                "others": false,
-                "original": {
-                    "file": "B_big.png"
-                }
+                "name": "",
+                "shirts": ["B_big.png"],
+                "hexes": ["#FFFFFF"]
             },
             "C": {
-                "others": true,
-                "original": {
-                    "file": "C_big.png"
-                },
-                "diffs": ["C_big.png", "CA_big.png"],
+                "name": "",
+                "shirts": ["C_big.png", "CA_big.png"],
                 "hexes": ["#FFFFFF", "#FFE4B8"]
             },
             "D": {
-                "others": true,
-                "original": {
-                    "file": "D_big.png"
-                },
-                "diffs": ["D_big.png", "DA_big.png"],
+                "name": "",
+                "shirts": ["D_big.png", "DA_big.png"],
                 "hexes": ["#FFFFFF", "#FFE4B8"]
             },
             "E": {
-                "others": false,
-                "original": {
-                    "file": "E_big.png"
-                }
+              "name": "",
+              "shirts": ["E_big.png"],
+              "hexes": ["#000"]
             },
             "F": {
-                "others": false,
-                "original": {
-                    "file": "F_big.png"
-                }
+              "name": "",
+              "shirts": ["F_big.png"],
+              "hexes": ["#000"]
             }
         }
     },

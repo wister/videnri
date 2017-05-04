@@ -269,6 +269,7 @@ function getFolderB(callback){
   //END OF EXTRA COLORS
 
   if(!cache[cacheCollection].images){ //doesn't exist in cache
+    console.log("cache[%s].images doesn't exist in cache", cacheCollection);
     console.log(cache[cacheCollection]);
     if(!cache[cacheCollection].colors){
       var imagesAll = [folder+"/A_big"+quality+".png", folder+"/B_big"+quality+".png", folder+"/C_big"+quality+".png", folder+"/D_big"+quality+".png", folder+"/E_big"+quality+".png", folder+"/F_big"+quality+".png"];

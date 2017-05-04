@@ -192,7 +192,8 @@ function fly(top, left, text){
 
 function getFolderB(callback){
   var collection = globalCollection;
-  if(logging){console.log("getFolder("+collection+", "+callback+")");}
+  //if(logging){console.log("getFolder("+collection+", "+callback.name+")");}
+  if(logging){console.log("getFolder(%s, %s)", collection, callback.name);}
   var folder = collection.toLowerCase();
   folder = folder.replace(/ /g, "-");
   //var cacheCollection = folder.replace(/-/g, "");
@@ -268,6 +269,7 @@ function getFolderB(callback){
   //END OF EXTRA COLORS
 
   if(!cache[cacheCollection].images){ //doesn't exist in cache
+    console.log(cache[cacheCollection]);
     if(!cache[cacheCollection].colors){
       var imagesAll = [folder+"/A_big"+quality+".png", folder+"/B_big"+quality+".png", folder+"/C_big"+quality+".png", folder+"/D_big"+quality+".png", folder+"/E_big"+quality+".png", folder+"/F_big"+quality+".png"];
     }

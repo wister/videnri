@@ -228,14 +228,14 @@ function getFolderB(callback){
   var shirtsPlaceholder = [];
   var hexesPlaceholder = [];
   $.each(allItems.collections[cacheCollection], function(index, value){
-    if(value.others === true){
+    if(value.shirts.length > 1){
       hasExtraColors = true;
-      shirtsPlaceholder = shirtsPlaceholder.concat(value.diffs);
+      shirtsPlaceholder = shirtsPlaceholder.concat(value.shirts);
       hexesPlaceholder = hexesPlaceholder.concat(value.hexes);
     }
     else {
-      shirtsPlaceholder = shirtsPlaceholder.concat(value.original.file);
-      hexesPlaceholder = hexesPlaceholder.concat("#fff");
+      shirtsPlaceholder = shirtsPlaceholder.concat(value.shirts[0]);
+      hexesPlaceholder = hexesPlaceholder.concat(value.hexes[0]);
     }
   });
   $.each(shirtsPlaceholder, function(index, value){

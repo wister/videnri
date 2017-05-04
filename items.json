@@ -1,0 +1,78 @@
+{
+    "collections": {
+        "diablico-sucio": {
+            "A": {
+                "others": false,
+                "original": {
+                    "file": "A_big.png"
+                }
+            },
+            "B": {
+                "others": false,
+                "original": {
+                    "file": "B_big.png"
+                }
+            },
+            "C": {
+                "others": false,
+                "original": {
+                    "file": "C_big.png"
+                }
+            },
+            "D": {
+                "others": false,
+                "original": {
+                    "file": "D_big.png"
+                }
+            }
+        },
+        "la-mirada-marsa": {
+            "A": {
+                "others": true,
+                "original": {
+                    "file": "A_big.png"
+                },
+                "diffs": ["A_big.png", "AA_big.png"],
+                "hexes": ["#FFFFFF", "#FFE4B8"]
+            },
+            "B": {
+                "others": false,
+                "original": {
+                    "file": "B_big.png"
+                }
+            },
+            "C": {
+                "others": true,
+                "original": {
+                    "file": "C_big.png"
+                },
+                "diffs": ["C_big.png", "CA_big.png"],
+                "hexes": ["#FFFFFF", "#FFE4B8"]
+            },
+            "D": {
+                "others": true,
+                "original": {
+                    "file": "D_big.png"
+                },
+                "diffs": ["D_big.png", "DA_big.png"],
+                "hexes": ["#FFFFFF", "#FFE4B8"]
+            },
+            "E": {
+                "others": false,
+                "original": {
+                    "file": "E_big.png"
+                }
+            },
+            "F": {
+                "others": false,
+                "original": {
+                    "file": "F_big.png"
+                }
+            }
+        }
+    },
+    "quality": {
+        "lossy": "fs8",
+        "lossless": "or8"
+    }
+}

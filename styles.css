@@ -1,0 +1,454 @@
+@font-face {
+  font-family: "Nexa Bold";
+  src:         url("Nexa Bold.otf");
+}
+html {
+  overflow: auto;
+  height:   100%;
+  width:    100%;
+}
+body {
+  margin:           0;
+  font-family:      "Nexa Bold";
+  background-color: #7A7A7A;
+  height:           100%;
+  width:            100%;
+}
+div#intro {
+  position:   absolute;
+  display:    none;
+  margin:     0;
+  left:       0px;
+  top:        0px;
+  width:      100%;
+  height:     100%;
+  background: #7A7A7A url(videnri.png) no-repeat center center;
+  z-index:    12;
+}
+div#intro:hover, div#overlay:hover {
+  cursor: pointer;
+}
+div#overlay {
+  position:   absolute;
+  display:    block;
+  margin:     0;
+  left:       0px;
+  top:        0px;
+  width:      100%;
+  height:     100%;
+  background: #7A7A7A;
+  z-index:    10;
+}
+div#loading{
+  position:        absolute;
+  display:         none;
+  z-index:         13;
+  width:           100%;
+  height:          3vh;
+  top:             calc(14vh + 3vh - 1.5vh);
+  background:      url(loading.gif) no-repeat center center;
+  background-size: auto 3vh;
+}
+div#main {
+  /*width: 1250px;*/
+  /*height: 618px;*/
+  width:            100%;
+  height:           100%;
+  background-color: #7A7A7A;
+  background:       url(moon-background.jpg);
+}
+  /*
+  div#main div {
+    width: calc(100% / 3);
+    height: 50%;
+    background-color: #9b59b6;
+    display: inline-block;
+    border-radius: 50%;
+  }
+  */
+div#upper {
+  height:  calc(1000px / 3 / 2);
+  display: inline-block;
+}
+div#upper div#logo, div#upper div#upper-title {
+  display: inline-block;
+}
+  div#logo {
+    width:      calc(1000px / 3 / 2);
+    height:     100%;
+    background: url(logo.png) no-repeat center center;
+  }
+  div#upper-title {
+    width:    calc(100% - (1250px / 3 / 2));
+    height:   calc(1000px / 3 / 2);
+    position: absolute; /*SUPER IMPORTANTE*/
+  }
+    div#upper-title div#upper-title-container {
+      margin:     0 auto;
+      width:      calc((3 * 1250px / 3 / 2) + (2 * 2 * 1250px / 3 / 2 * 0.2));
+      text-align: right;
+    }
+      div#upper-title div#upper-title-container div#title{
+        position:   relative;
+        margin-top: 96px; /*Medido con regla*/
+        color:      #FFFFFF;
+        font-size:  14.5pt;
+      }
+div#bottom {
+  height: calc(100% - (1000px / 3 / 2))
+}
+div#bottom div#bottom-nav, div#bottom div#bottom-content {
+  display: inline-block;
+}
+    div#bottom-nav {
+      width: calc(1000px / 3 / 2);
+      /*height: calc(618px - (1250px / 3 / 2));*/
+      height:           100%;
+      background:       white;
+      background-image:
+        linear-gradient(
+          to right,
+          #cdcdcd,
+          white 20% /*begin white from 20% of width*/
+        );
+      font-size:   8.5pt;
+      color:       #7A7A7A;
+      line-height: 20px;
+      position:    relative;
+    }
+          div#bottom-nav div a:hover {
+            cursor:pointer;
+          }
+          div#upper-title a.hover {
+            cursor:pointer;
+          }
+          div#upper-title a.nohover {
+            cursor:default;
+          }
+          div#bottom-nav-links {
+            width:        calc(1000px / 3 / 2);
+            text-align:   left;
+            padding-left: 20%;
+            top:          40px;
+            position:     relative;
+          }
+          div#bottom-nav-footer {
+            width:      calc(1000px / 3 / 2);
+            text-align: center;
+            position:   absolute;
+            bottom:     calc(2 * 1000px / 3 / 2 * 0.2);
+          }
+                div#bottom-nav-footer a#Q{
+                  font-size: 50px;
+                  display:   none;
+                }
+                div#language {
+                  width:      calc(1000px / 3 / 2);
+                  text-align: center;
+                  position:   absolute;
+                  bottom:     20px;
+                }
+  div#bottom-content {
+    position: absolute;
+    //width:  calc(1250px * 5 / 6);
+    width:    calc(100% - (1250px / 3 / 2));
+    /*height: calc(618px - (1250px / 3 / 2));*/
+  }
+        /*
+            CIRCLES
+        */
+        /*
+          old container	width: calc((3 * 1250px / 3 / 2) + (2 * 2 * 1250px / 3 / 2 * 0.2));		773px
+                  height: calc((1250px / 3 / 2) + (2 * 1250px / 3 / 2 * 0.2));			467px
+          new	container	width: calc((3 * 1250px / 3 / 2) + (2 * 2 * 1250px / 3 / 2 * 0.2));		773px
+                  height: calc((2 * 1250px / 3 / 2) + (1 * 2 * 1250px / 3 / 2 * 0.2));	400px
+        */
+      div#bottom-circles-container {
+        width:    calc((3 * 1250px / 3 / 2) + (2 * 2 * 1250px / 3 / 2 * 0.2));
+        height:   calc((2 * 1250px / 3 / 2) + (1 * 2 * 1250px / 3 / 2 * 0.2));
+        position: relative;
+        margin:   0 auto;
+        //border: 1px solid black;
+      }
+      div#bottom-circles-container div {
+        /*display: inline-block;*/
+      }
+      div#bottom-circles-container div.mid-circle {
+        border-radius:    50%;
+        width:            calc(1250px / 3 / 2);
+        height:           calc(1250px / 3 / 2);
+        background-color: #FFFFFF;
+        text-align:       center;
+        position:         absolute;
+        overflow:         hidden;
+      }
+            div.midmid-one{
+              top:  0px;
+              left: 0px;
+            }
+            div.midmid-two{
+              top:  0px;
+              left: calc( ((3 * 1250px / 3 / 2) + (2 * 2 * 1250px / 3 / 2 * 0.2))*0.50 - (1250px / 3 / 2)/2 ); /* Middle horizontal position in mid circles */
+            }
+            div.midmid-three{
+              top:  0px;
+              left: calc( ((3 * 1250px / 3 / 2) + (2 * 2 * 1250px / 3 / 2 * 0.2)) - (1250px / 3 / 2) ); /* Final position on horizontal axis*/
+            }
+            div.midmid-four{
+              top:  calc( ((2 * 1250px / 3 / 2) + (1 * 2 * 1250px / 3 / 2 * 0.2)) - (1250px / 3 / 2) );
+              left: 0px;
+            }
+            div.midmid-five{
+              top:  calc( ((2 * 1250px / 3 / 2) + (1 * 2 * 1250px / 3 / 2 * 0.2)) - (1250px / 3 / 2));
+              left: calc( ((3 * 1250px / 3 / 2) + (2 * 2 * 1250px / 3 / 2 * 0.2))*0.50 - (1250px / 3 / 2)/2 );
+            }
+            div.midmid-six{
+              top:  calc( ((2 * 1250px / 3 / 2) + (1 * 2 * 1250px / 3 / 2 * 0.2)) - (1250px / 3 / 2) );
+              left: calc( ((3 * 1250px / 3 / 2) + (2 * 2 * 1250px / 3 / 2 * 0.2)) - (1250px / 3 / 2) );
+            }
+      div#bottom-circles-container div.mid-circle a {
+        position:          relative;
+        top:               calc(50% - (9.5pt/2)); /* Needs to be adjuted. http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/*/
+        -webkit-transform: translateY(-50%);
+        -ms-transform:     translateY(-50%);
+        transform:         translateY(-50%);
+      }
+      div#bottom-circles-container div.mid-circle div {
+
+      }
+      div#bottom-circles-container div.mid-circle img {
+        position: absolute;
+        width:    calc(1250px / 3 / 2);
+        height:   calc(1250px / 3 / 2);
+        top:      0;
+        bottom:   0;
+        left:     0;
+        right:    0;
+        margin:   auto;
+      }
+      div.small-circle {
+        position:         absolute;
+        width:            calc(((2 * 1250px / 3 / 2) + (1 * 2 * 1250px / 3 / 2 * 0.2)) * 3/11);
+        height:           calc(((2 * 1250px / 3 / 2) + (1 * 2 * 1250px / 3 / 2 * 0.2)) * 3/11);
+        border-radius:    50%;
+        background-color: #FFFFFF;
+        overflow:         hidden;
+      }
+          div.small-one {
+            left: 0px;
+            top:  0px;
+          }
+          div.small-two {
+            left: 0;
+            top:  calc(50% - (((2 * 1250px / 3 / 2) + (1 * 2 * 1250px / 3 / 2 * 0.2)) * 3/11)/2); /* 50% - height/2 */
+          }
+          div.small-three {
+            left: 0;
+            top:  calc(((2 * 1250px / 3 / 2) + (1 * 2 * 1250px / 3 / 2 * 0.2)) * 8/11);
+          }
+                /*
+                  SMALL IMAGES
+                */
+                div.small-circle img {
+                  width:    136px;
+                  height:   136px;
+                  top:      0;
+                  bottom:   0;
+                  left:     0;
+                  right:    0;
+                  margin:   auto;
+                  position: absolute;
+                }
+      div.big-circle{
+        position:         absolute;
+        width:            calc(((2 * 1250px / 3 / 2) + (1 * 2 * 1250px / 3 / 2 * 0.2)) * 11/11);
+        height:           calc(((2 * 1250px / 3 / 2) + (1 * 2 * 1250px / 3 / 2 * 0.2)) * 11/11);
+        border-radius:    50%;
+        background-color: #FFFFFF;
+        left:             calc((3 * 1250px / 3 / 2) + (2 * 2 * 1250px / 3 / 2 * 0.2) - ((2 * 1250px / 3 / 2) + (1 * 2 * 1250px / 3 / 2 * 0.2)));
+        top:              calc(50% - (((2 * 1250px / 3 / 2) + (1 * 2 * 1250px / 3 / 2 * 0.2)) * 11/11)/2); /*50% - height/2 */
+        overflow:         hidden;
+      }
+          div.big-circle div {
+            width:    500px;
+            height:   500px;
+            top:      0;
+            bottom:   0;
+            left:     0;
+            right:    0;
+            margin:   auto;
+            position: absolute;
+          }
+          div.big-circle div img {
+            width:  500px;
+            height: 500px;
+          }
+              div#colors{
+                position:         absolute;
+                display:          none;
+                border-radius:    50%;
+                background-color: #7A7A7A;
+                width:            50px;
+                height:           50px;
+                top:              calc(100% - 50px);
+                left:             calc(100% - 50px);
+              }
+                  div#colors:hover {
+                    cursor: pointer;
+                  }
+      div.small-circle:hover, div.mid-circle:hover{
+        cursor: pointer;
+        /*
+        -moz-box-shadow:    inset 0 0 2px black;
+        -webkit-box-shadow: inset 0 0 2px black;
+        box-shadow:         inset 0 0 2px black;
+        */
+      }
+      div.big-circle:hover {
+        cursor: url(zoom.png), pointer;
+      }
+/*
+  FOOTER
+*/
+div#form {
+  width:    calc((3 * 1250px / 3 / 2) + (2 * 2 * 1250px / 3 / 2 * 0.2));
+  height:   calc((2 * 1250px / 3 / 2) + (1 * 2 * 1250px / 3 / 2 * 0.2));
+  position: relative;
+  margin:   0 auto;
+}
+      div#form textarea {
+        font-family:  "Nexa Bold";
+        font-size:    13.5pt;
+        color:        #7A7A7A;
+        resize:       none;
+        box-sizing:   border-box;
+        border-width: 0;
+        padding:      20px;
+        width:        100%;
+        height:       86%;
+      }
+      div#arroba {
+        background:      url("@.png") no-repeat center center;
+        background-size: 97%;
+        width:           5%;
+        height:          8%;
+        top:             92%;
+        position:        absolute;
+      }
+      div#form input#email {
+        font-family:  "Nexa Bold";
+        font-size:    13.5pt;
+        color:        #7A7A7A;
+        width:        40%;
+        height:       7%;
+        top:          92%;
+        left:         7%;
+        padding-left: 8px;
+        position:     absolute;
+      }
+            textarea:focus, input:focus{
+              outline: 0;
+            }
+      div#attach {
+        background:      url("+.png") no-repeat center center;
+        background-size: 97%;
+        width:           32px;
+        height:          32px;
+        top:             92%;
+        left:            49%;
+        position:        absolute;
+        display:         none; /* REVISION */
+      }
+      img#send {
+        background:      url("avion.png") no-repeat center center;
+        background-size: 100%;
+        width:           35px;
+        height:          35px;
+        /*top: calc(100% - 35px);*/
+        top:  92%;
+        left: calc(100% - 35px);
+        /*left: 100%;*/
+        position: absolute;
+      }
+      img#send:hover {
+        cursor:pointer;
+      }
+div#size {
+  width:      calc((3 * 1250px / 3 / 2) + (2 * 2 * 1250px / 3 / 2 * 0.2));
+  height:     calc((2 * 1250px / 3 / 2) + (1 * 2 * 1250px / 3 / 2 * 0.2));
+  position:   relative;
+  margin:     0 auto;
+  background: url("size.png") no-repeat center center;
+}
+    div#sizing {
+      width:      100%;
+      height:     100%;
+      margin:     0 auto;
+      background: url("size-en.png") no-repeat center center;
+    }
+div#follow {
+  width:    calc((3 * 1250px / 3 / 2) + (2 * 2 * 1250px / 3 / 2 * 0.2));
+  height:   calc((2 * 1250px / 3 / 2) + (1 * 2 * 1250px / 3 / 2 * 0.2));
+  position: relative;
+  margin:   0 auto;
+}
+  div.social {
+    position:         absolute;
+    width:            114px;
+    height:           114px;
+    background-color: white;
+    border-radius:    50%;
+  }
+    div.social:nth-child(1) {
+      top:  calc(50% - 57px);
+      left: 0px;
+    }
+    div.social:nth-child(2) {
+      top:  calc(50% - 57px);
+      left: calc(114px + (100% - (114px*4))/3 );
+    }
+    div.social:nth-child(3) {
+      top:  calc(50% - 57px);
+      left: calc( 114px*2 + (100% - (114px*4))/3*2);
+    }
+    div.social:nth-child(4) {
+      top:  calc(50% - 57px);
+      left: calc(100% - 114px);
+    }
+  div.social img{
+    width:  114px;
+    height: 114px
+  }
+span#fly {
+  display:   none;
+  position:  absolute;
+  color:     white;
+  font-size: 8.5pt;
+}
+span.pricetag {
+  top:       15px;
+  display:   none;
+  position:  absolute;
+  font-size: 8.5pt;
+  color:     #7A7A7A;
+}
+span#price {
+  font-size: 8.5pt;
+  color:     #7A7A7A;
+}
+div#css-variables {
+  position: absolute;
+  display:  none;
+}
+div#css-variables span#mid-circle {
+  width: calc(1250px / 3 / 2);
+}
+div#css-variables span#small-circle {
+  width: calc(((2 * 1250px / 3 / 2) + (1 * 2 * 1250px / 3 / 2 * 0.2)) * 3/11);
+}
+div#css-variables span#big-circle {
+  width: calc(((2 * 1250px / 3 / 2) + (1 * 2 * 1250px / 3 / 2 * 0.2)) * 11/11);
+}
+div#css-variables span#social-circle {
+  width: 114px;
+}

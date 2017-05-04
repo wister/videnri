@@ -199,32 +199,7 @@ function getFolderB(callback){
   //var cacheCollection = folder.replace(/-/g, "");
   var cacheCollection = folder;
   $("div#loading").fadeIn();
-  /*if(!cache[cacheCollection].names){
-    var imagesNames = JSON.parse(UrlExists(folder+"/NAMES.txt"));
-    if(imagesNames){
-      cache[cacheCollection].names = imagesNames;
-    }
-  }*/
 
-  //EXTRA COLORS
-  /*if(UrlExists(folder+"/COLORS.SHIRTS.txt") && UrlExists(folder+"/COLORS.HEX.txt")){
-    cache[cacheCollection].colors = {};
-    cache[cacheCollection].colors.shirts = JSON.parse(UrlExists(folder+"/COLORS.SHIRTS.txt"));
-    cache[cacheCollection].colors.hex = JSON.parse(UrlExists(folder+"/COLORS.HEX.txt"));
-    cache[cacheCollection].colors.unique = {};
-    //Filter 1 letter
-    $.each(cache[cacheCollection].colors.shirts, function(index, value){
-      //console.log(index + " " + value)
-      if(value.length == 1){
-        cache[cacheCollection].colors.unique[value] = [value];
-      }
-      else if(value.length == 2){
-        var unique = value.charAt(0);
-        cache[cacheCollection].colors.unique[unique].push(value);
-      }
-      //console.log(cache[cacheCollection].colors.unique)
-    });
-  }*/
   var hasExtraColors = false;
   var shirtsPlaceholder = [];
   var hexesPlaceholder = [];
@@ -268,10 +243,10 @@ function getFolderB(callback){
   }
   //END OF EXTRA COLORS
 
-  if(!cache[cacheCollection].images){ //doesn't exist in cache
-    console.log("cache[%s].images doesn't exist in cache", cacheCollection);
+  if(!cache[cacheCollection].images){ //doesn't exist in cache, it means it needs to be cached, preloaded if you will.
+    console.log("cache[%s].images doesn't exist in cache, so now we are caching. So the browser downloads it #loading.gif", cacheCollection);
     console.log(cache[cacheCollection]);
-    if(!cache[cacheCollection].colors){
+    if(!cache[cacheCollection].colors){ //Hard coded in case everything fails. However this should never be triggered anymore
       var imagesAll = [folder+"/A_big"+quality+".png", folder+"/B_big"+quality+".png", folder+"/C_big"+quality+".png", folder+"/D_big"+quality+".png", folder+"/E_big"+quality+".png", folder+"/F_big"+quality+".png"];
     }
     else {

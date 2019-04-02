@@ -52,7 +52,8 @@ var allItems = {};
     allItems = items;
 
     $.each(items.collections, function(index, value){
-      //console.log(index + value);
+      console.log(index + value);
+      console.log(allItems);
       //var objectName = index.replace(/-/g, "");
       var objectName = index;
       cache.objects[cache.objects.length] = objectName;

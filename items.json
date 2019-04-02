@@ -20,19 +20,18 @@
               "name": "mini",
               "shirts": ["D_big.png", "DV_big.png"],
               "hexes": ["#FFF", "#FFF"]
-            }
-            ,
+            },
             "E": {
               "name": "grumpy",
               "shirts": ["E_big.png", "EV_big.png"],
               "hexes": ["#FFF", "#FFF"]
-            }
-            ,
+            },
             "F": {
               "name": "smiley",
               "shirts": ["F_big.png", "FV_big.png"],
               "hexes": ["#FFF", "#FFF"]
-            }
+            },
+            "visible": false,
         },
         "la-mirada-marsa": {
             "A": {
@@ -64,7 +63,8 @@
               "name": "",
               "shirts": ["F_big.png"],
               "hexes": ["#000"]
-            }
+            },
+            "visible": true,
         }
     },
     "quality": {

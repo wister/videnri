@@ -45,7 +45,7 @@ var allItems = {};
   cache.names = {};
   //cache.names = JSON.parse(UrlExists("COLLECTIONS.txt"));
   fetch('items.json').then(function(response) {
-      console.log(response);
+    //console.log(response);
     return response.json();
   }).then(function(items) {
     //console.log(items.collections);
@@ -57,7 +57,10 @@ var allItems = {};
       var objectName = index;
       cache.objects[cache.objects.length] = objectName;
       cache[objectName] = {};
-      $("div#bottom-nav-links").append("<a>"+index.replace(/-/g, " ").toUpperCase()+"</a><br>");
+      if(allItems.collections.index.visible == true){
+        $("div#bottom-nav-links").append("<a>"+index.replace(/-/g, " ").toUpperCase()+"</a><br>");
+      };
+      delete allItems.collections.index.visible;
     });
     addHandlers(false, "collection");
   });

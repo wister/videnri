@@ -52,16 +52,16 @@ var allItems = {};
     allItems = items;
 
     $.each(items.collections, function(index, value){
-      console.log(index + value);
-      console.log(allItems);
+      //console.log(index + value);
+      //console.log(allItems);
       //var objectName = index.replace(/-/g, "");
       var objectName = index;
       cache.objects[cache.objects.length] = objectName;
       cache[objectName] = {};
-      if(allItems.collections.index.visible == true){
+      if(allItems.collections[index].visible == true){
         $("div#bottom-nav-links").append("<a>"+index.replace(/-/g, " ").toUpperCase()+"</a><br>");
       };
-      delete allItems.collections.index.visible;
+      delete allItems.collections[index].visible;
     });
     addHandlers(false, "collection");
   });

@@ -31,7 +31,7 @@
               "shirts": ["F_big.png", "FV_big.png"],
               "hexes": ["#FFF", "#FFF"]
             },
-            "visible": false,
+            "visible": false
         },
         "la-mirada-marsa": {
             "A": {
@@ -64,7 +64,7 @@
               "shirts": ["F_big.png"],
               "hexes": ["#000"]
             },
-            "visible": true,
+            "visible": true
         }
     },
     "quality": {

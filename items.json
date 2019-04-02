@@ -30,8 +30,8 @@
               "name": "smiley",
               "shirts": ["F_big.png", "FV_big.png"],
               "hexes": ["#FFF", "#FFF"]
-            },
-            "visible": false
+            }
+            
         },
         "la-mirada-marsa": {
             "A": {
@@ -63,8 +63,8 @@
               "name": "",
               "shirts": ["F_big.png"],
               "hexes": ["#000"]
-            },
-            "visible": true
+            }
+            
         }
     },
     "quality": {

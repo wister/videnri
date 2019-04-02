@@ -45,6 +45,7 @@ var allItems = {};
   cache.names = {};
   //cache.names = JSON.parse(UrlExists("COLLECTIONS.txt"));
   fetch('items.json').then(function(response) {
+      console.log(response);
     return response.json();
   }).then(function(items) {
     //console.log(items.collections);
